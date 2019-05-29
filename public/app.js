@@ -21,7 +21,7 @@ $(document).on("click", "p", function () {
     })
         .then(function (data) {
             console.log(data);
-            $("#notes").append("<h2>Save a Note for This Article</h2>");
+            $("#notes").append("<h2>Save a Note about This Article</h2>");
             $("#notes").append("<input type='text' id='titleinput' name='title' >");
             $("#notes").append("<textarea class='form-control' id='bodyinput' name='body'></textarea>");
             $("#notes").append("<button type='button' class='btn btn-primary btn-lg' data-id='" + data._id + "' id='savenote'>Save Note</button>");
