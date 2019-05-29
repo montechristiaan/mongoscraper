@@ -6,6 +6,7 @@ $(document).on("click", "#scrapeButton", function () {
                 + "URL: " + "<a href='" + data[i].link + "'> Click Here </a>"
                 + "<p>" + data[i].teaser + "</p>"
                 + "<img src='" + data[i].photo + "' />"
+                + "<hr>"
             );
         }
     });
@@ -20,10 +21,10 @@ $(document).on("click", "p", function () {
     })
         .then(function (data) {
             console.log(data);
-            $("#notes").append("<h2>" + data.title + "</h2>");
-            $("#notes").append("<input id='titleinput' name='title' >");
-            $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
-            $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+            $("#notes").append("<h2>Save a Note for This Article</h2>");
+            $("#notes").append("<input type='text' id='titleinput' name='title' >");
+            $("#notes").append("<textarea class='form-control' id='bodyinput' name='body'></textarea>");
+            $("#notes").append("<button type='button' class='btn btn-primary btn-lg' data-id='" + data._id + "' id='savenote'>Save Note</button>");
 
             if (data.note) {
                 $("#titleinput").val(data.note.title);
