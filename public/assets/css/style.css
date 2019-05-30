@@ -1,3 +1,4 @@
-.jumbotron {
-    background-image: url("/public/assets/images/mongobackground.jpg");
+.container {
+    background-image: url("../images/mongobackground.jpg");
+    background-size: 100%;
 }
